@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app/controller/note_controller.dart';
 import 'package:note_app/utils/current_time.dart';
-import '../../model/note/note.dart';
-import '../widgets/custom_text_form_field.dart';
+import '../../model/note.dart';
+import '../../../../components/custom_text_form_field.dart';
 
 class EditNoteScreen extends StatefulWidget {
   const EditNoteScreen({
@@ -39,8 +39,8 @@ class _EditNoteScreenState extends State<EditNoteScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
-      onWillPop: () async {
+    return PopScope(
+      onPopInvokedWithResult: (s,y) async {
         await editNote();
         return Future(() => true);
       },

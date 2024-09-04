@@ -1,4 +1,4 @@
-import '../model/tip/tip.dart';
+import '../../model/tip.dart';
 
 Map<Tip, List<String>> tips = {
   Tip.time: [

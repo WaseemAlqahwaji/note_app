@@ -4,8 +4,8 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../../model/tip/tip.dart';
-import '../../utils/constant.dart';
+import '../../model/tip.dart';
+import '../constants/constant.dart';
 
 class TipScreen extends StatefulWidget {
   const TipScreen({super.key});

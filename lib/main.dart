@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:note_app/utils/scroll.dart';
-import 'package:note_app/utils/system_overlay.dart';
-import 'package:note_app/utils/theme.dart';
-import 'package:note_app/view/screens/edit_note_screen.dart';
-import 'package:note_app/view/screens/home_layout.dart';
-import 'package:note_app/view/screens/notes_screen.dart';
-import 'package:note_app/view/screens/onboard_screen.dart';
-import 'package:note_app/view/screens/tip_screen.dart';
+import 'package:note_app/config/scroll.dart';
+import 'package:note_app/config/system_overlay.dart';
+import 'package:note_app/config/theme.dart';
+import 'package:note_app/features/note/view/screens/edit_note_screen.dart';
+import 'package:note_app/features/home/view/screens/home_layout.dart';
+import 'package:note_app/features/note/view/screens/notes_screen.dart';
+import 'package:note_app/features/onboard/screen/onboard_screen.dart';
+import 'package:note_app/features/home/view/screens/tip_screen.dart';
 
 import 'controller/note_binding.dart';
 

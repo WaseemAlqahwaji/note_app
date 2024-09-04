@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app/controller/note_controller.dart';
-import 'package:note_app/model/note/note.dart';
-import '../../model/category/category.dart';
-import '../../utils/theme.dart';
+import 'package:note_app/features/note/model/note.dart';
+import '../../../home/model/category.dart';
+import '../../../../config/theme.dart';
 
 class NoteItem extends StatelessWidget {
   final Category? currentCategory;

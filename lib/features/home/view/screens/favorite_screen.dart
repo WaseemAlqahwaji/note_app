@@ -6,8 +6,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:note_app/utils/extensions.dart';
-import '../../controller/note_controller.dart';
-import '../widgets/custom_note_item.dart';
+import '../../../../controller/note_controller.dart';
+import '../../../note/view/widgets/custom_note_item.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({super.key});

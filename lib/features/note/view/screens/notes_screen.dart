@@ -2,13 +2,15 @@
 
 import 'package:conditional_builder_null_safety/conditional_builder_null_safety.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:get/get.dart';
 import 'package:note_app/controller/note_controller.dart';
-import 'package:note_app/utils/theme.dart';
-import 'package:note_app/view/widgets/custom_bottom_sheet.dart';
-import '../../model/category/category.dart';
-import '../widgets/custom_button.dart';
+import 'package:note_app/config/theme.dart';
+import 'package:note_app/features/home/view/screens/dashboard_screen.dart';
+import 'package:note_app/features/note/view/widgets/custom_bottom_sheet.dart';
+import '../../../home/model/category.dart';
+import '../../../../components/custom_button.dart';
 import '../widgets/custom_note_item.dart';
 
 class NoteScreen extends StatefulWidget {
@@ -51,7 +53,8 @@ class _NoteScreenState extends State<NoteScreen> {
                         index: index,
                         currentCategory: currentCategory,
                       ),
-                    ).toList(),
+                    )
+                    .toList(),
               ),
             ),
           ),
@@ -82,7 +85,10 @@ class _NoteScreenState extends State<NoteScreen> {
                 ignoreSafeArea: false,
                 backgroundColor: KTheme.backgroundColor,
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(10.r),
+                    topRight: Radius.circular(10.r),
+                  ),
                 ),
               );
             },

@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:note_app/controller/note_controller.dart';
-import 'package:note_app/model/category/category.dart';
-import 'package:note_app/model/note/note.dart';
-import 'package:note_app/utils/validation.dart';
+import 'package:note_app/features/home/model/category.dart';
+import 'package:note_app/features/note/model/note.dart';
+import 'package:note_app/config/validation.dart';
 
-import '../../utils/current_time.dart';
-import 'custom_button.dart';
-import 'custom_text_form_field.dart';
+import '../../../../utils/current_time.dart';
+import '../../../../components/custom_button.dart';
+import '../../../../components/custom_text_form_field.dart';
 
 class KBottomSheet extends StatefulWidget {
   final Category category;

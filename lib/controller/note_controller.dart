@@ -2,9 +2,9 @@
 import 'package:flutter/foundation.dart' as h;
 import 'package:get/get.dart';
 import 'package:note_app/data/local.dart';
-import '../model/category/category.dart';
-import '../model/note/note.dart';
-import '../view/widgets/custom_toast.dart';
+import '../features/home/model/category.dart';
+import '../features/note/model/note.dart';
+import '../components/custom_toast.dart';
 
 class NoteController extends GetxController {
   HiveHelper obj = HiveHelper();

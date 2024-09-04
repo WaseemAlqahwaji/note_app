@@ -2,8 +2,8 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
 import 'package:path_provider/path_provider.dart';
-import '../model/category/category.dart';
-import '../model/note/note.dart';
+import '../features/home/model/category.dart';
+import '../features/note/model/note.dart';
 
 class HiveHelper {
   final String _databaseName = 'NoteDB';

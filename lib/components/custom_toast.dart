@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:note_app/utils/theme.dart';
+import 'package:note_app/config/theme.dart';
 
 Future<void> showToast({required String text}){
   return Fluttertoast.showToast(

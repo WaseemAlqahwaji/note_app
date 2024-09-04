@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'hex_color.dart';
+import '../utils/hex_color.dart';
 
 class KTheme{
 
@@ -13,7 +13,7 @@ class KTheme{
   static ThemeData lightMode = ThemeData(
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ButtonStyle(
-        backgroundColor: MaterialStateProperty.all<Color>(mainColor),
+        backgroundColor: WidgetStateProperty.all<Color>(mainColor),
       ),
     ),
     inputDecorationTheme: InputDecorationTheme(

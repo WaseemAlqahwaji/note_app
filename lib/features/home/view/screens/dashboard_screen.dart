@@ -5,10 +5,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:note_app/controller/note_controller.dart';
-import 'package:note_app/model/category/category.dart';
-import 'package:note_app/utils/extensions.dart';
-import '../../model/tip/tip.dart';
-import '../../utils/theme.dart';
+import 'package:note_app/features/home/model/category.dart';
+import '../../model/tip.dart';
+import '../../../../config/theme.dart';
 
 class DashBoardScreen extends StatelessWidget {
   DashBoardScreen({super.key});
@@ -19,35 +18,20 @@ class DashBoardScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(
-          height: context.statusBarHeight + 20.0,
-        ),
         Expanded(
           flex: 10,
           child: _profileSection(),
-        ),
-        const SizedBox(
-          height: 30.0,
         ),
         Align(
           alignment: Alignment.centerLeft,
           child: _bodyTitle("Tips For You"),
         ),
-        const SizedBox(
-          height: 20.0,
-        ),
         _tipsList(
           context: context,
-        ),
-        const SizedBox(
-          height: 20.0,
         ),
         Align(
           alignment: Alignment.centerLeft,
           child: _bodyTitle("Note Categorys"),
-        ),
-        const SizedBox(
-          height: 20.0,
         ),
         _noteCategoryList(),
       ],
@@ -55,41 +39,16 @@ class DashBoardScreen extends StatelessWidget {
   }
 
   Widget _profileSection() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Expanded(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              FittedBox(
-                child: Text(
-                  "Note-Taking App",
-                  style: TextStyle(
-                    fontSize: 20.0.sp,
-                    fontWeight: FontWeight.w900,
-                    color: KTheme.secondColor,
-                  ),
-                ),
-              ),
-              FittedBox(
-                child: Text(
-                  "Welcome User",
-                  style: TextStyle(
-                    fontSize: 12.sp,
-                    color: Colors.grey,
-                  ),
-                ),
-              ),
-            ],
-          ),
+    return Align(
+      alignment: Alignment.centerLeft,
+      child: Text(
+        "Note-Taking App",
+        style: TextStyle(
+          fontSize: 20.0.sp,
+          fontWeight: FontWeight.w900,
+          color: KTheme.secondColor,
         ),
-        const Icon(
-          Icons.person_outlined,
-          color: Colors.grey,
-        ),
-      ],
+      ),
     );
   }
 
@@ -166,7 +125,7 @@ class DashBoardScreen extends StatelessWidget {
 
   Widget _noteCategoryList() {
     return Flexible(
-      flex: 50,
+      flex: 40,
       child: LayoutBuilder(
         builder: (context, constraints) => GridView.builder(
           physics: const NeverScrollableScrollPhysics(),
